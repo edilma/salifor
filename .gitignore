@@ -25,3 +25,8 @@ __pycache__/
 
 #documents supported
 *.docx
+
+#pickle files
+*.pkl
+*.pklz
+
