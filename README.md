@@ -63,9 +63,6 @@ ROC AUC
 ## Modeling & Evaluation
 
 A **Random Forest** classifier (500 trees) was tuned via 5-fold CV to maximize ROC AUC.  
-The plot below shows each feature’s relative importance in predicting who will leave:
-
-![Random Forest Feature Importance](images/rf_feature_importance.png)
 
 - **Top 3 drivers** of attrition:  
   1. **Satisfaction level**  
@@ -84,10 +81,14 @@ We compared these results against the Decision Tree and Logistic Regression mode
 ## Project Structure
 
 - `HR_Attrition_Capstone.ipynb`: Main Jupyter notebook containing all code, analysis, and visualizations.
-- `HR_capstone_dataset.csv`: The dataset used for analysis.
 - `decision_tree_model.pkl`, `logistic_model.pkl`, `logistic_model_stratified.pkl`, `model_strat_balance.pkl`, `random_forest_best_model.pkl`: Saved machine learning models.
 - `requirements.txt`: List of Python dependencies.
-- `Salifor Autos Project.docx`: Project summary document.
+
+## Data Source
+
+The HR dataset is available on Kaggle:  
+[Salifort Motors HR Analytics Dataset](https://www.kaggle.com/datasets/mfaisalqureshi/hr-analytics-and-job-prediction?select=HR_comma_sep.csv)
+
 
 ## How to Run
 
