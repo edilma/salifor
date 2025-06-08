@@ -2,15 +2,16 @@
 
 ## Overview
 
-This project analyzes HR data from Salifort Motors to identify factors influencing employee attrition and to build predictive models that help the HR department proactively address employee turnover. The analysis includes data cleaning, exploratory data analysis (EDA), feature engineering, and the development of machine learning models to predict whether an employee will leave the company.
+This project analyzes HR data from Salifort Motors to identify factors influencing employee attrition and to build predictive models that help the HR department proactively address employee turnover. 
+The analysis includes data cleaning, exploratory data analysis (EDA), feature engineering, and the development of machine learning models to predict whether an employee will leave the company.
 
 ## Business Problem
 
 Salifort Motors has experienced significant employee turnover, and the company seeks to understand:
 
-What factors contribute to attrition?
+- What factors contribute to employee attrition
 
-Can we predict who is likely to leave?
+- Predict which employees are at hight risk of leaving
 
 ## Dataset 
 
@@ -58,6 +59,26 @@ Recall
 F1 Score
 
 ROC AUC
+
+## Modeling & Evaluation
+
+A **Random Forest** classifier (500 trees) was tuned via 5-fold CV to maximize ROC AUC.  
+The plot below shows each feature’s relative importance in predicting who will leave:
+
+![Random Forest Feature Importance](images/rf_feature_importance.png)
+
+- **Top 3 drivers** of attrition:  
+  1. **Satisfaction level**  
+  2. **Average monthly hours**  
+  3. **Last evaluation score**  
+- **Performance on test set:**  
+  - Accuracy: 98.5%  
+  - Precision: 99.1%  
+  - Recall: 91.6%  
+  - F1 Score: 95.2%  
+  - ROC AUC: 0.98  
+
+We compared these results against the Decision Tree and Logistic Regression models using the same metrics. The Random Forest offered the best overall AUC, while the Decision Tree had the highest recall, and the Logistic Regression provided the most interpretable coefficients.
 
 
 ## Project Structure
